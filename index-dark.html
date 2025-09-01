@@ -8,7 +8,7 @@
     <meta name="keywords" content="Xyvionix, mission‑critical business solutions, affordable enterprise IT, cloud consulting, AI solutions, agentic AI, RAG, ML, open‑source IT consulting" />
     <meta name="author" content="Xyvionix" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#2C001E" />
+    <meta name="theme-color" content="#0B0F14" />
     <link rel="canonical" href="https://www.xyvionix.com/" />
 
     <!-- Open Graph / Twitter -->
@@ -36,19 +36,25 @@
             fontFamily: { ubuntu: ['Ubuntu', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'] },
             colors: {
               ub: {
-                orange: '#E95420',     // Ubuntu Orange
-                aubergine: '#772953',  // Canonical Aubergine
-                toledo: '#2C001E',     // Deep aubergine
-                warm: '#AEA79F',       // Warm grey
-                paper: '#F7F7F7'
+                orange: '#E95420',
+                aubergine: '#772953',
+                toledo: '#2C001E',
+                cloudy: '#AEA79F',
+                charcoal: '#e6e6e6'
               },
-              ink: '#1A0F16',          // slightly lighter than Toledo for readability
-              steel: '#20121C',
-              veil: 'rgba(255,255,255,0.06)'
+              ink: '#0B0F14',
+              steel: '#121821',
+              smoke: '#0F141B',
+              edge: '#1C2532',
+              neon: '#7FE9FF'
             },
             boxShadow: {
-              soft: '0 10px 30px rgba(0,0,0,0.35)',
-              glow: '0 0 0 2px rgba(233,84,32,0.25), 0 10px 30px rgba(0,0,0,0.45)'
+              soft: '0 10px 30px rgba(0,0,0,0.25)',
+              glow: '0 0 0 2px rgba(127,233,255,0.15), 0 10px 30px rgba(0,0,0,0.35)'
+            },
+            backgroundImage: {
+              'ai-grid': "radial-gradient(1200px 600px at 80% -10%, rgba(127,233,255,0.07), transparent 60%), radial-gradient(800px 500px at -10% 20%, rgba(233,84,32,0.08), transparent 60%), linear-gradient(180deg, rgba(12,16,22,1) 0%, rgba(10,14,20,1) 100%)",
+              'card-wire': 'linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))'
             }
           }
         }
@@ -57,37 +63,18 @@
     <style>
       :root { color-scheme: dark; }
       .focus-ring:focus { outline: 3px solid #E95420; outline-offset: 2px; }
-      /* Ubuntu-styled AI grid (brand-correct: aubergine/orange accents) */
-      .ai-surface {
-        position: relative;
-        background: radial-gradient(1200px 500px at 80% -10%, rgba(233,84,32,0.07), transparent 60%),
-                    radial-gradient(900px 400px at -10% 20%, rgba(119,41,83,0.20), transparent 60%),
-                    linear-gradient(180deg, #2C001E 0%, #1A0F16 100%);
-        overflow: hidden;
-      }
-      .ai-surface::before {
-        content: "";
-        position: absolute; inset: -200% -200% 0 -200%;
-        background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-                          linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-        background-size: 40px 40px, 40px 40px;
-        transform: translateZ(0);
-        animation: gridMove 22s linear infinite;
-        pointer-events: none;
-      }
-      @keyframes gridMove { to { transform: translate(-80px, -40px); } }
     </style>
   </head>
-  <body class="font-ubuntu text-[15px] text-white antialiased bg-ink">
-    <a class="sr-only focus:not-sr-only focus-ring absolute left-2 top-2 z-50 bg-ub.toledo text-white px-3 py-2 rounded" href="#main">Skip to content</a>
+  <body class="font-ubuntu text-[15px] text-ub-charcoal antialiased bg-ink">
+    <a class="sr-only focus:not-sr-only focus-ring absolute left-2 top-2 z-50 bg-edge text-white px-3 py-2 rounded" href="#main">Skip to content</a>
 
     <!-- Top bar -->
-    <div class="w-full bg-ub.toledo text-white/90 text-center py-2 px-4 text-sm border-b border-white/10">
+    <div class="w-full bg-gradient-to-r from-ub-aubergine/70 via-edge to-ub-aubergine/70 text-white text-center py-2 px-4 text-sm border-b border-white/10">
       Xyvionix — Mission‑critical AI & Cloud with open‑source affordability
     </div>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur bg-steel/80 border-b border-white/10">
+    <header class="sticky top-0 z-50 backdrop-blur bg-smoke/75 border-b border-white/10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <a href="#home" class="flex items-center gap-2 focus-ring" aria-label="Xyvionix home">
@@ -95,12 +82,12 @@
             <span class="text-[17px] font-medium tracking-tight text-white">Xyvionix</span>
           </a>
           <nav class="hidden md:flex items-center gap-7 text-[14px]" aria-label="Primary">
-            <a href="#solutions" class="hover:text-ub-orange text-white/85">Solutions</a>
-            <a href="#ai" class="hover:text-ub-orange text-white/85">Agentic AI</a>
-            <a href="#cloud" class="hover:text-ub-orange text-white/85">Cloud</a>
-            <a href="#work" class="hover:text-ub-orange text-white/85">Results</a>
-            <a href="#faq" class="hover:text-ub-orange text-white/85">FAQ</a>
-            <a href="#contact" class="hover:text-ub-orange text-white/85">Contact</a>
+            <a href="#solutions" class="hover:text-ub-orange text-white/80">Solutions</a>
+            <a href="#ai" class="hover:text-ub-orange text-white/80">Agentic AI</a>
+            <a href="#cloud" class="hover:text-ub-orange text-white/80">Cloud</a>
+            <a href="#work" class="hover:text-ub-orange text-white/80">Results</a>
+            <a href="#faq" class="hover:text-ub-orange text-white/80">FAQ</a>
+            <a href="#contact" class="hover:text-ub-orange text-white/80">Contact</a>
           </nav>
           <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-ub-orange text-white px-4 py-2 text-sm font-medium shadow-glow hover:opacity-95 focus-ring">
             Start a Project
@@ -111,14 +98,15 @@
 
     <main id="main">
       <!-- Hero -->
-      <section id="home" class="relative overflow-hidden ai-surface">
+      <section id="home" class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-ai-grid"></div>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <div class="grid lg:grid-cols-2 gap-10 items-center">
-            <div class="text-white relative">
+            <div class="text-white">
               <h1 class="text-4xl sm:text-5xl leading-tight font-bold tracking-tight">
                 Mission‑Critical Business Solutions <span class="text-ub-orange">Made Affordable</span>
               </h1>
-              <p class="mt-5 text-white/85 text-lg max-w-xl">
+              <p class="mt-5 text-white/80 text-lg max-w-xl">
                 Xyvionix builds resilient software, cloud platforms, and agentic AI (RAG/ML) that withstand production realities—secure, observable, and cost‑efficient by design.
               </p>
               <ul class="mt-6 text-white/85 text-sm grid grid-cols-2 gap-2 max-w-lg">
@@ -132,12 +120,12 @@
                 <li>Affordable via open‑source</li>
               </ul>
               <div class="mt-8 flex flex-wrap gap-3">
-                <a href="#solutions" class="rounded-full bg-white text-ub-aubergine px-5 py-3 text-sm font-medium shadow-soft hover:bg-white/90 focus-ring">Explore Solutions</a>
+                <a href="#solutions" class="rounded-full bg-white text-ink px-5 py-3 text-sm font-medium shadow-soft hover:bg-white/90 focus-ring">Explore Solutions</a>
                 <a href="#contact" class="rounded-full border border-white/20 text-white px-5 py-3 text-sm font-medium hover:bg-white/5 focus-ring">Talk to an Expert</a>
               </div>
             </div>
             <div class="relative">
-              <div class="rounded-2xl bg-veil ring-1 ring-white/10 p-6 sm:p-8 backdrop-blur">
+              <div class="rounded-2xl bg-card-wire ring-1 ring-white/10 p-6 sm:p-8 backdrop-blur">
                 <div class="grid grid-cols-2 gap-4">
                   <div class="rounded-xl bg-white/5 p-4 backdrop-blur ring-1 ring-white/10">
                     <h3 class="text-white font-medium">Agentic AI</h3>
@@ -157,22 +145,22 @@
                   </div>
                 </div>
               </div>
-              <p class="text-white/50 text-xs mt-3">* Dark Ubuntu palette (Aubergine/Toledo) with subtle orange accents.</p>
+              <p class="text-white/50 text-xs mt-3">* Dark, AI‑forward theme with Ubuntu palette accents.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Solutions -->
-      <section id="solutions" class="py-16 sm:py-20 bg-steel/70 border-y border-white/5" aria-label="Solutions">
+      <section id="solutions" class="py-16 sm:py-20 bg-steel/60 border-y border-white/5" aria-label="Solutions">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="max-w-2xl">
             <h2 class="text-3xl font-bold tracking-tight text-white">Enterprise solutions that ship value</h2>
-            <p class="mt-3 text-white/75">From idea to impact—understood in seconds, adopted in days, and scaled for years.</p>
+            <p class="mt-3 text-white/70">From idea to impact—understood in seconds, adopted in days, and scaled for years.</p>
           </div>
           <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Cards use Ubuntu brand with dark chrome -->
-            <article class="rounded-2xl bg-ink p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
+            <!-- Card -->
+            <article class="rounded-2xl bg-smoke/70 p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
               <meta itemprop="serviceType" content="Custom Software Development" />
               <div class="flex items-center gap-3">
                 <span class="h-10 w-10 grid place-items-center rounded-lg bg-ub-orange/15 text-ub-orange">
@@ -180,10 +168,10 @@
                 </span>
                 <h3 class="text-lg font-semibold text-white" itemprop="name">Custom Software</h3>
               </div>
-              <p class="mt-3 text-white/75" itemprop="description">Bespoke web & mobile apps tailored to KPIs—secure, fast, maintainable.</p>
+              <p class="mt-3 text-white/70" itemprop="description">Bespoke web & mobile apps tailored to KPIs—secure, fast, maintainable.</p>
             </article>
 
-            <article class="rounded-2xl bg-ink p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
+            <article class="rounded-2xl bg-smoke/70 p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
               <meta itemprop="serviceType" content="Cloud Solutions" />
               <div class="flex items-center gap-3">
                 <span class="h-10 w-10 grid place-items-center rounded-lg bg-ub-orange/15 text-ub-orange">
@@ -191,10 +179,10 @@
                 </span>
                 <h3 class="text-lg font-semibold text-white" itemprop="name">Cloud Solutions</h3>
               </div>
-              <p class="mt-3 text-white/75" itemprop="description">Landing zones, container platforms, cost‑optimized architectures.</p>
+              <p class="mt-3 text-white/70" itemprop="description">Landing zones, container platforms, cost‑optimized architectures.</p>
             </article>
 
-            <article class="rounded-2xl bg-ink p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
+            <article class="rounded-2xl bg-smoke/70 p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
               <meta itemprop="serviceType" content="Agentic AI" />
               <div class="flex items-center gap-3">
                 <span class="h-10 w-10 grid place-items-center rounded-lg bg-ub-orange/15 text-ub-orange">
@@ -202,10 +190,10 @@
                 </span>
                 <h3 class="text-lg font-semibold text-white" itemprop="name">Agentic AI</h3>
               </div>
-              <p class="mt-3 text-white/75" itemprop="description">Tool‑using agents that automate workflows across your stack.</p>
+              <p class="mt-3 text-white/70" itemprop="description">Tool‑using agents that automate workflows across your stack.</p>
             </article>
 
-            <article class="rounded-2xl bg-ink p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
+            <article class="rounded-2xl bg-smoke/70 p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
               <meta itemprop="serviceType" content="RAG Search" />
               <div class="flex items-center gap-3">
                 <span class="h-10 w-10 grid place-items-center rounded-lg bg-ub-orange/15 text-ub-orange">
@@ -213,10 +201,10 @@
                 </span>
                 <h3 class="text-lg font-semibold text-white" itemprop="name">RAG Search</h3>
               </div>
-              <p class="mt-3 text-white/75" itemprop="description">Retrieval‑augmented generation for accurate answers from your data.</p>
+              <p class="mt-3 text-white/70" itemprop="description">Retrieval‑augmented generation for accurate answers from your data.</p>
             </article>
 
-            <article class="rounded-2xl bg-ink p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
+            <article class="rounded-2xl bg-smoke/70 p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
               <meta itemprop="serviceType" content="ML‑Powered Analytics" />
               <div class="flex items-center gap-3">
                 <span class="h-10 w-10 grid place-items-center rounded-lg bg-ub-orange/15 text-ub-orange">
@@ -224,10 +212,10 @@
                 </span>
                 <h3 class="text-lg font-semibold text-white" itemprop="name">ML‑Powered Analytics</h3>
               </div>
-              <p class="mt-3 text-white/75" itemprop="description">Forecasts, lead scoring, anomaly detection—decisions backed by data.</p>
+              <p class="mt-3 text-white/70" itemprop="description">Forecasts, lead scoring, anomaly detection—decisions backed by data.</p>
             </article>
 
-            <article class="rounded-2xl bg-ink p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
+            <article class="rounded-2xl bg-smoke/70 p-6 ring-1 ring-white/10 shadow-soft hover:shadow-glow transition" itemscope itemtype="https://schema.org/Service">
               <meta itemprop="serviceType" content="Open‑Source Affordability" />
               <div class="flex items-center gap-3">
                 <span class="h-10 w-10 grid place-items-center rounded-lg bg-ub-orange/15 text-ub-orange">
@@ -235,7 +223,7 @@
                 </span>
                 <h3 class="text-lg font-semibold text-white" itemprop="name">Open‑Source Affordability</h3>
               </div>
-              <p class="mt-3 text-white/75" itemprop="description">Lower TCO without vendor lock‑in. Transparent, community‑backed stacks.</p>
+              <p class="mt-3 text-white/70" itemprop="description">Lower TCO without vendor lock‑in. Transparent, community‑backed stacks.</p>
             </article>
           </div>
         </div>
@@ -247,29 +235,29 @@
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 class="text-3xl font-bold tracking-tight text-white">Agentic AI that works with your stack</h2>
-              <p class="mt-4 text-white/80">We design AI agents that use your tools and data to complete tasks end‑to‑end. From ticket triage to lead qualification and order management—agents act, reason and learn.</p>
+              <p class="mt-4 text-white/75">We design AI agents that use your tools and data to complete tasks end‑to‑end. From ticket triage to lead qualification and order management—agents act, reason and learn.</p>
               <ul class="mt-6 space-y-3 text-white/85">
-                <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-ub-orange"></span> Tool‑use via APIs, RPA and connectors</li>
-                <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-ub-orange"></span> Retrieval‑augmented generation (RAG) for accuracy</li>
-                <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-ub-orange"></span> Guardrails, observability and human‑in‑the‑loop</li>
+                <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-neon"></span> Tool‑use via APIs, RPA and connectors</li>
+                <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-neon"></span> Retrieval‑augmented generation (RAG) for accuracy</li>
+                <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-neon"></span> Guardrails, observability and human‑in‑the‑loop</li>
               </ul>
             </div>
-            <div class="rounded-2xl border border-white/10 p-6 shadow-glow bg-ink">
+            <div class="rounded-2xl border border-white/10 p-6 shadow-glow bg-smoke/70">
               <div class="grid sm:grid-cols-3 gap-4">
-                <div class="rounded-xl bg-steel p-4 ring-1 ring-white/10">
+                <div class="rounded-xl bg-edge p-4 ring-1 ring-white/10">
                   <p class="text-xs uppercase text-white/60">Phase 1</p>
                   <p class="mt-1 font-medium text-white">Discover & Align</p>
-                  <p class="mt-2 text-sm text-white/75">Business goals → use‑cases → data audit</p>
+                  <p class="mt-2 text-sm text-white/70">Business goals → use‑cases → data audit</p>
                 </div>
-                <div class="rounded-xl bg-steel p-4 ring-1 ring-white/10">
+                <div class="rounded-xl bg-edge p-4 ring-1 ring-white/10">
                   <p class="text-xs uppercase text-white/60">Phase 2</p>
                   <p class="mt-1 font-medium text-white">Pilot in Days</p>
-                  <p class="mt-2 text-sm text-white/75">Narrow scope, measurable ROI</p>
+                  <p class="mt-2 text-sm text-white/70">Narrow scope, measurable ROI</p>
                 </div>
-                <div class="rounded-xl bg-steel p-4 ring-1 ring-white/10">
+                <div class="rounded-xl bg-edge p-4 ring-1 ring-white/10">
                   <p class="text-xs uppercase text-white/60">Phase 3</p>
                   <p class="mt-1 font-medium text-white">Scale & Govern</p>
-                  <p class="mt-2 text-sm text-white/75">Security, cost, monitoring</p>
+                  <p class="mt-2 text-sm text-white/70">Security, cost, monitoring</p>
                 </div>
               </div>
             </div>
@@ -278,24 +266,24 @@
       </section>
 
       <!-- Cloud -->
-      <section id="cloud" class="py-16 sm:py-20 bg-steel/80 border-y border-white/5" aria-label="Cloud">
+      <section id="cloud" class="py-16 sm:py-20 bg-edge/60 border-y border-white/5" aria-label="Cloud">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="max-w-2xl">
             <h2 class="text-3xl font-bold tracking-tight text-white">Cloud done right</h2>
-            <p class="mt-3 text-white/80">Secure foundations, automated delivery, observability from day one—on AWS, Azure, GCP or on‑prem with Kubernetes.</p>
+            <p class="mt-3 text-white/75">Secure foundations, automated delivery, observability from day one—on AWS, Azure, GCP or on‑prem with Kubernetes.</p>
           </div>
           <div class="mt-8 grid md:grid-cols-3 gap-6">
-            <div class="rounded-xl bg-ink p-6 ring-1 ring-white/10">
+            <div class="rounded-xl bg-smoke/70 p-6 ring-1 ring-white/10">
               <h3 class="font-semibold text-white">Architecture & Landing Zones</h3>
-              <p class="mt-2 text-white/75">Networking, identity, guardrails and IaC.</p>
+              <p class="mt-2 text-white/70">Networking, identity, guardrails and IaC.</p>
             </div>
-            <div class="rounded-xl bg-ink p-6 ring-1 ring-white/10">
+            <div class="rounded-xl bg-smoke/70 p-6 ring-1 ring-white/10">
               <h3 class="font-semibold text-white">Containers & Platforms</h3>
-              <p class="mt-2 text-white/75">Docker, Kubernetes, GitOps and developer portals.</p>
+              <p class="mt-2 text-white/70">Docker, Kubernetes, GitOps and developer portals.</p>
             </div>
-            <div class="rounded-xl bg-ink p-6 ring-1 ring-white/10">
+            <div class="rounded-xl bg-smoke/70 p-6 ring-1 ring-white/10">
               <h3 class="font-semibold text-white">Cost & Reliability</h3>
-              <p class="mt-2 text-white/75">FinOps, autoscaling, SRE and incident response.</p>
+              <p class="mt-2 text-white/70">FinOps, autoscaling, SRE and incident response.</p>
             </div>
           </div>
         </div>
@@ -307,29 +295,29 @@
           <div class="grid lg:grid-cols-3 gap-6">
             <div class="lg:col-span-1">
               <h2 class="text-3xl font-bold tracking-tight text-white">Outcomes over output</h2>
-              <p class="mt-3 text-white/80">We prioritise measurable business results: conversion uplift, cost savings, faster cycle times.</p>
-              <ul class="mt-4 list-disc list-inside text-sm text-white/85">
+              <p class="mt-3 text-white/75">We prioritise measurable business results: conversion uplift, cost savings, faster cycle times.</p>
+              <ul class="mt-4 list-disc list-inside text-sm text-white/80">
                 <li>Mission‑critical reliability (HA, DR, security by default)</li>
                 <li>Open‑source stacks to control cost and avoid lock‑in</li>
                 <li>Transparent SLAs and observability</li>
               </ul>
             </div>
             <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6" aria-label="Business impact metrics">
-              <div class="rounded-2xl border border-white/10 p-6 bg-ink">
+              <div class="rounded-2xl border border-white/10 p-6 bg-smoke/70">
                 <p class="text-4xl font-bold text-ub-orange">↑ 37%</p>
-                <p class="mt-1 text-white/80">Lead‑to‑sale conversion using RAG + scoring</p>
+                <p class="mt-1 text-white/75">Lead‑to‑sale conversion using RAG + scoring</p>
               </div>
-              <div class="rounded-2xl border border-white/10 p-6 bg-ink">
+              <div class="rounded-2xl border border-white/10 p-6 bg-smoke/70">
                 <p class="text-4xl font-bold text-ub-orange">↓ 28%</p>
-                <p class="mt-1 text-white/80">Cloud spend with right‑sizing & autoscaling</p>
+                <p class="mt-1 text-white/75">Cloud spend with right‑sizing & autoscaling</p>
               </div>
-              <div class="rounded-2xl border border-white/10 p-6 bg-ink">
+              <div class="rounded-2xl border border-white/10 p-6 bg-smoke/70">
                 <p class="text-4xl font-bold text-ub-orange">3×</p>
-                <p class="mt-1 text-white/80">Faster onboarding via platform automation</p>
+                <p class="mt-1 text-white/75">Faster onboarding via platform automation</p>
               </div>
-              <div class="rounded-2xl border border-white/10 p-6 bg-ink">
+              <div class="rounded-2xl border border-white/10 p-6 bg-smoke/70">
                 <p class="text-4xl font-bold text-ub-orange">99.95%</p>
-                <p class="mt-1 text-white/80">Uptime on production workloads</p>
+                <p class="mt-1 text-white/75">Uptime on production workloads</p>
               </div>
             </div>
           </div>
@@ -337,14 +325,14 @@
       </section>
 
       <!-- CTA Banner -->
-      <section class="py-12 bg-ub-aubergine/70 text-white border-y border-white/10">
+      <section class="py-12 bg-gradient-to-r from-edge via-ub-aubergine/50 to-edge text-white border-y border-white/5">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <div>
               <h3 class="text-2xl font-semibold">Let’s solve your hardest problem</h3>
-              <p class="text-white/90 mt-2">Book a 30‑minute discovery to map a path from idea to value.</p>
+              <p class="text-white/85 mt-2">Book a 30‑minute discovery to map a path from idea to value.</p>
             </div>
-            <a href="#contact" class="inline-flex items-center rounded-full bg-white text-ub-aubergine px-6 py-3 font-medium hover:bg-white/90 focus-ring shadow-glow">Book Discovery</a>
+            <a href="#contact" class="inline-flex items-center rounded-full bg-white text-ink px-6 py-3 font-medium hover:bg-white/90 focus-ring shadow-glow">Book Discovery</a>
           </div>
         </div>
       </section>
@@ -354,10 +342,10 @@
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 class="text-3xl font-bold tracking-tight text-white">FAQ</h2>
           <div class="mt-6 grid md:grid-cols-2 gap-6">
-            <details class="rounded-xl bg-ink p-5 ring-1 ring-white/10"><summary class="font-medium cursor-pointer text-white">What makes Xyvionix mission‑critical ready?</summary><p class="mt-2 text-white/80">We architect for high availability, disaster recovery, zero‑trust security, and observability from day one, validated via load tests and chaos drills.</p></details>
-            <details class="rounded-xl bg-ink p-5 ring-1 ring-white/10"><summary class="font-medium cursor-pointer text-white">How do you keep costs affordable?</summary><p class="mt-2 text-white/80">Open‑source first, right‑sizing, autoscaling, and FinOps reporting keep TCO in control without compromising reliability.</p></details>
-            <details class="rounded-xl bg-ink p-5 ring-1 ring-white/10"><summary class="font-medium cursor-pointer text-white">Do you support on‑prem and cloud?</summary><p class="mt-2 text-white/80">Yes—AWS, Azure, GCP, and on‑prem Kubernetes. We meet you where your data and compliance live.</p></details>
-            <details class="rounded-xl bg-ink p-5 ring-1 ring-white/10"><summary class="font-medium cursor-pointer text-white">Can you integrate with our stack?</summary><p class="mt-2 text-white/80">We build agentic AI and custom apps that talk to your CRMs, ERPs, data warehouses, and internal APIs.</p></details>
+            <details class="rounded-xl bg-smoke/70 p-5 ring-1 ring-white/10"><summary class="font-medium cursor-pointer text-white">What makes Xyvionix mission‑critical ready?</summary><p class="mt-2 text-white/75">We architect for high availability, disaster recovery, zero‑trust security, and observability from day one, validated via load tests and chaos drills.</p></details>
+            <details class="rounded-xl bg-smoke/70 p-5 ring-1 ring-white/10"><summary class="font-medium cursor-pointer text-white">How do you keep costs affordable?</summary><p class="mt-2 text-white/75">Open‑source first, right‑sizing, autoscaling, and FinOps reporting keep TCO in control without compromising reliability.</p></details>
+            <details class="rounded-xl bg-smoke/70 p-5 ring-1 ring-white/10"><summary class="font-medium cursor-pointer text-white">Do you support on‑prem and cloud?</summary><p class="mt-2 text-white/75">Yes—AWS, Azure, GCP, and on‑prem Kubernetes. We meet you where your data and compliance live.</p></details>
+            <details class="rounded-xl bg-smoke/70 p-5 ring-1 ring-white/10"><summary class="font-medium cursor-pointer text-white">Can you integrate with our stack?</summary><p class="mt-2 text-white/75">We build agentic AI and custom apps that talk to your CRMs, ERPs, data warehouses, and internal APIs.</p></details>
           </div>
         </div>
         <!-- FAQ Structured Data -->
@@ -377,39 +365,39 @@
     </main>
 
     <!-- Contact / Footer -->
-    <footer id="contact" class="py-16 bg-steel/80 border-t border-white/10">
+    <footer id="contact" class="py-16 bg-smoke/70 border-t border-white/10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-10">
           <div>
             <h4 class="text-lg font-semibold text-white">Contact</h4>
-            <p class="mt-3 text-white/85">Ready to make your business mission‑critical and future‑proof? Let’s discuss an affordable solution.</p>
-            <div class="mt-5 space-y-1 text-white/90">
-              <p>Email: <a href="mailto:enquiry@xyvionix.com" class="text-ub-orange hover:underline">enquiry@xyvionix.com</a></p>
-              <p>Phone: <a href="tel:+911234567890" class="text-ub-orange hover:underline">+91 12345 67890</a></p>
+            <p class="mt-3 text-white/75">Ready to make your business mission‑critical and future‑proof? Let’s discuss an affordable solution.</p>
+            <div class="mt-5 space-y-1 text-white/85">
+              <p>Email: <a href="mailto:enquiry@xyvionix.com" class="text-neon hover:underline">enquiry@xyvionix.com</a></p>
+              <p>Phone: <a href="tel:+911234567890" class="text-neon hover:underline">+91 12345 67890</a></p>
             </div>
           </div>
-          <form class="md:col-span-2 bg-ink p-6 rounded-2xl ring-1 ring-white/10 shadow-soft">
+          <form class="md:col-span-2 bg-edge p-6 rounded-2xl ring-1 ring-white/10 shadow-soft">
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-sm text-white/75">Name</label>
-                <input class="mt-1 w-full rounded-lg border-white/10 bg-steel text-white placeholder-white/40 focus-ring px-3 py-2" type="text" placeholder="Your name" required>
+                <label class="block text-sm text-white/70">Name</label>
+                <input class="mt-1 w-full rounded-lg border-white/10 bg-smoke/70 text-white placeholder-white/40 focus-ring px-3 py-2" type="text" placeholder="Your name" required>
               </div>
               <div>
-                <label class="block text-sm text-white/75">Email</label>
-                <input class="mt-1 w-full rounded-lg border-white/10 bg-steel text-white placeholder-white/40 focus-ring px-3 py-2" type="email" placeholder="you@company.com" required>
+                <label class="block text-sm text-white/70">Email</label>
+                <input class="mt-1 w-full rounded-lg border-white/10 bg-smoke/70 text-white placeholder-white/40 focus-ring px-3 py-2" type="email" placeholder="you@company.com" required>
               </div>
               <div class="sm:col-span-2">
-                <label class="block text-sm text-white/75">Project Brief</label>
-                <textarea class="mt-1 w-full rounded-lg border-white/10 bg-steel text-white placeholder-white/40 focus-ring px-3 py-2" rows="4" placeholder="Tell us about your goals…"></textarea>
+                <label class="block text-sm text-white/70">Project Brief</label>
+                <textarea class="mt-1 w-full rounded-lg border-white/10 bg-smoke/70 text-white placeholder-white/40 focus-ring px-3 py-2" rows="4" placeholder="Tell us about your goals…"></textarea>
               </div>
             </div>
             <button type="submit" class="mt-4 inline-flex items-center gap-2 rounded-full bg-ub-orange text-white px-5 py-3 font-medium hover:opacity-95 shadow-glow">Send Inquiry
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M3 4.5a.75.75 0 0 1 1.02-.707l17.25 6.75a.75.75 0 0 1 0 1.414L4.02 18.707A.75.75 0 0 1 3 18V4.5Z"/><path d="M6.25 8.27 12.832 12 6.25 15.73V8.27Z"/></svg>
             </button>
-            <p class="mt-3 text-xs text-white/60">By submitting, you agree to our terms & privacy policy.</p>
+            <p class="mt-3 text-xs text-white/50">By submitting, you agree to our terms & privacy policy.</p>
           </form>
         </div>
-        <div class="mt-12 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/70">
+        <div class="mt-12 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/60">
           <p>© <span id="y"></span> Xyvionix — All rights reserved.</p>
           <div class="flex items-center gap-4">
             <a href="linkedin.com/company/106384922/" class="hover:text-ub-orange">LinkedIn</a>
