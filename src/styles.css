@@ -1,26 +1,13 @@
 @import "tailwindcss";
 
-/* === Base (apply Ubuntu look & dark bg) === */
+/* === Base === */
 @layer base {
   body {
-    font-family: 'Ubuntu', system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-family: 'Ubuntu', system-ui, 'Segoe UI', 'Roboto', 'Arial', sans-serif;
     background-color: #1A0F16; /* ink */
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: #ffffff;
-  }
-
-  a {
-    color: #E95420; /* ub-orange */
-    transition: color 0.2s ease;
-  }
-  a:hover {
-    color: #772953; /* aubergine */
   }
 }
 
@@ -62,29 +49,35 @@
   }
 }
 
-/* === Utilities === */
+/* === Utilities (manual equivalents of your config) === */
 @layer utilities {
-  .bg-ink { background-color: #1A0F16; }
-  .bg-steel { background-color: #20121C; }
+  /* Fonts */
+  .font-ubuntu { font-family: 'Ubuntu', system-ui, 'Segoe UI', 'Roboto', 'Arial', sans-serif; }
+
+  /* Colors */
   .bg-ub-orange { background-color: #E95420; }
   .bg-ub-aubergine { background-color: #772953; }
   .bg-ub-toledo { background-color: #2C001E; }
+  .bg-ub-warm { background-color: #AEA79F; }
+  .bg-ub-paper { background-color: #F7F7F7; }
+  .bg-ink { background-color: #1A0F16; }
+  .bg-steel { background-color: #20121C; }
+  .bg-veil { background-color: rgba(255,255,255,0.06); }
 
   .text-ub-orange { color: #E95420; }
   .text-ub-aubergine { color: #772953; }
   .text-ub-toledo { color: #2C001E; }
+  .text-ub-warm { color: #AEA79F; }
+  .text-ub-paper { color: #F7F7F7; }
+  .text-ink { color: #1A0F16; }
+  .text-steel { color: #20121C; }
 
-  .shadow-soft {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  }
-  .shadow-glow {
-    box-shadow: 0 0 0 2px rgba(233,84,32,0.25), 0 10px 30px rgba(0,0,0,0.45);
-  }
+  /* Shadows */
+  .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+  .shadow-glow { box-shadow: 0 0 0 2px rgba(233,84,32,0.25), 0 10px 30px rgba(0,0,0,0.45); }
 
-  .grid-bg {
-    background-image:
-      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
+   .bg-ub-orange-15 { background-color: rgba(233,84,32,0.15); }
+  .bg-ub-aubergine-70 { background-color: rgba(119,41,83,0.70); }
+  .bg-steel-70 { background-color: rgba(32,18,28,0.70); }
+  .bg-steel-80 { background-color: rgba(32,18,28,0.80); }
 }
