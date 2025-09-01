@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* === Base (apply Ubuntu look & dark bg) === */
+@layer base {
+  body {
+    font-family: 'Ubuntu', system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #1A0F16; /* ink */
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  a {
+    color: #E95420; /* ub-orange */
+    transition: color 0.2s ease;
+  }
+  a:hover {
+    color: #772953; /* aubergine */
+  }
+}
+
+/* === Components === */
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all;
+  }
+
+  .btn-primary {
+    background-color: #E95420; /* ub-orange */
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 0 2px rgba(233,84,32,0.25), 0 10px 30px rgba(0,0,0,0.45);
+  }
+
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #ffffff;
+  }
+  .btn-outline:hover {
+    border-color: #E95420;
+    color: #E95420;
+  }
+
+  .btn-light {
+    background-color: #ffffff;
+    color: #2C001E; /* ub-toledo */
+  }
+
+  .card {
+    background-color: rgba(255,255,255,0.06); /* veil */
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+}
+
+/* === Utilities === */
+@layer utilities {
+  .bg-ink { background-color: #1A0F16; }
+  .bg-steel { background-color: #20121C; }
+  .bg-ub-orange { background-color: #E95420; }
+  .bg-ub-aubergine { background-color: #772953; }
+  .bg-ub-toledo { background-color: #2C001E; }
+
+  .text-ub-orange { color: #E95420; }
+  .text-ub-aubergine { color: #772953; }
+  .text-ub-toledo { color: #2C001E; }
+
+  .shadow-soft {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+  .shadow-glow {
+    box-shadow: 0 0 0 2px rgba(233,84,32,0.25), 0 10px 30px rgba(0,0,0,0.45);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
